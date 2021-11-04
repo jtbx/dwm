@@ -7,6 +7,9 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 In order to build dwm you need the Xlib header files.
 
+My config also requires the Hack font.
+
+On Arch Linux, you can install that package with `sudo pacman -S ttf-hack`
 
 # Installation
 
