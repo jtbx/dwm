@@ -7,9 +7,9 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 In order to build dwm you need the Xlib header files.
 
-My config also requires the JetBrains Mono font.
+My config also requires the JetBrains Mono font, Rofi, and rofi-emoji (you can disable rofi in the source code).
 
-On Arch Linux, you can install that package with `sudo pacman -S ttf-jetbrains-mono`
+On Arch Linux, you can install those packages with `sudo pacman -S ttf-jetbrains-mono rofi rofi-emoji`
 
 # Installation
 
