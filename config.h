@@ -60,18 +60,21 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* Dmenu command remapped to rofi */
-static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+/* Rofi application menu variable so it can be spawned using mod + x */ 
+static const char *appmenucmd[] = { "rofi", "-show", "drun", NULL };
 /* Terminal command remapped to alacritty */
 static const char *termcmd[]  = { "alacritty", NULL };
 /* Web browser variable so it can be spawned using mod + e */
 static const char *wbrsrcmd[] = { "librewolf", NULL };
  /* Rofi emoji menu variable so it can be spawned using mod + period */
-/* requires rofi-emoji                                         */
+/* requires rofi-emoji                                              */
 static const char *emojicmd[] = { "rofi", "-show", "emoji", NULL };
 
 static Key keys[] = {
 	/* modifier                  key           function        argument */
-	{ MODKEY,                    XK_x,         spawn,          {.v = dmenucmd } },
+	{ MODKEY,                    XK_p,         spawn,          {.v = dmenucmd } },
+	{ MODKEY,                    XK_x,         spawn,          {.v = appmenucmd } },
 	{ MODKEY,                    XK_Return,    spawn,          {.v = termcmd } },
 	/* allows for spawning web browser */
 	{ MODKEY,                    XK_w,         spawn,          {.v = wbrsrcmd } },
