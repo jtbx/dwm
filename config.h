@@ -70,6 +70,8 @@ static const char *wbrsrcmd[] = { "librewolf", NULL };
  /* Rofi emoji menu variable so it can be spawned using mod + period */
 /* requires rofi-emoji                                              */
 static const char *emojicmd[] = { "rofi", "-show", "emoji", NULL };
+/* Power off variable so it can be run using mod + shift + escape */
+static const char *powercmd[] = { "poweroff", NULL };
 
 static Key keys[] = {
 	/* modifier                  key           function        argument */
@@ -78,7 +80,10 @@ static Key keys[] = {
 	{ MODKEY,                    XK_Return,    spawn,          {.v = termcmd } },
 	/* allows for spawning web browser */
 	{ MODKEY,                    XK_w,         spawn,          {.v = wbrsrcmd } },
+	/* allows for spawning emoji menu */
 	{ MODKEY,                    XK_semicolon, spawn,          {.v = emojicmd } },
+	/* allows for turning off computer */
+	{ MODKEY|ShiftMask,          XK_Escape,    spawn,          {.v = powercmd } },
 	{ MODKEY,                    XK_b,         togglebar,      {0} },
 	{ MODKEY,                    XK_j,         focusstack,     {.i = +1 } },
 	{ MODKEY,                    XK_k,         focusstack,     {.i = -1 } },
