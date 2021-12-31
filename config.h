@@ -72,6 +72,10 @@ static const char *wbrsrcmd[] = { "librewolf", NULL };
 static const char *emojicmd[] = { "rofi", "-show", "emoji", NULL };
 /* Power off variable so it can be run using mod + shift + escape */
 static const char *powercmd[] = { "poweroff", NULL };
+/* Reboot variable so it can be run using mod + shift + r */
+static const char *rebootcmd[] = { "reboot", NULL };
+
+/* For powercmd & rebootcmd I'm planning for it to open a terminal window where it would ask you to confirm the poweroff/reboot. */
 
 static Key keys[] = {
 	/* modifier                  key           function        argument */
@@ -84,6 +88,8 @@ static Key keys[] = {
 	{ MODKEY,                    XK_semicolon, spawn,          {.v = emojicmd } },
 	/* allows for turning off computer */
 	{ MODKEY|ShiftMask,          XK_Escape,    spawn,          {.v = powercmd } },
+	/* allows for rebooting computer */
+	{ MODKEY|ShiftMask,          XK_r,         spawn,          {.v = rebootcmd } },
 	{ MODKEY,                    XK_b,         togglebar,      {0} },
 	{ MODKEY,                    XK_j,         focusstack,     {.i = +1 } },
 	{ MODKEY,                    XK_k,         focusstack,     {.i = -1 } },
