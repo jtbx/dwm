@@ -55,3 +55,5 @@ and (re)compiling the source code.
 I currently have the following patches:
 
 * fullgaps
+
+* barpadding
