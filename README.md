@@ -57,3 +57,5 @@ I currently have the following patches:
 * fullgaps
 
 * barpadding
+
+* hide_vacant_tags
