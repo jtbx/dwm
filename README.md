@@ -59,3 +59,5 @@ I currently have the following patches:
 * barpadding
 
 * hide_vacant_tags
+
+* swallow
