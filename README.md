@@ -9,7 +9,9 @@ In order to build dwm you need the Xlib header files.
 
 My config also requires the JetBrains Mono font, Rofi, and rofi-emoji (you can disable rofi in the source code).
 
-On Arch Linux, you can install those packages with `sudo pacman -S ttf-jetbrains-mono rofi rofi-emoji`
+On Arch Linux, you can install those packages with 
+
+    sudo pacman -S ttf-jetbrains-mono rofi rofi-emoji
 
 # Installation
 
