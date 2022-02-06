@@ -13,6 +13,12 @@ On Arch Linux, you can install those packages with `sudo pacman -S ttf-jetbrains
 
 ## Installation
 
+Execute the install script:
+
+	sudo sh INSTALL.sh
+
+Or you can do it the proper way:
+
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
 
