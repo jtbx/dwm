@@ -3,7 +3,7 @@
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
-# Requirements
+## Requirements
 
 In order to build dwm you need the Xlib header files.
 
@@ -11,7 +11,7 @@ My config also requires the JetBrains Mono font, Rofi, and rofi-emoji (you can d
 
 On Arch Linux, you can install those packages with `sudo pacman -S ttf-jetbrains-mono rofi rofi-emoji`
 
-# Installation
+## Installation
 
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
@@ -22,7 +22,7 @@ necessary as root):
     make clean install
 
 
-# Running dwm
+## Running dwm
 
 Add the following line to your .xinitrc to start dwm using startx:
 
@@ -45,12 +45,12 @@ like this in your .xinitrc:
     exec dwm
 
 
-# Configuration
+## Configuration
 
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
 
-# My patches
+## My patches
 
 I currently have the following patches:
 
