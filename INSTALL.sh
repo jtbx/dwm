@@ -20,6 +20,12 @@ detectDistro()
 	[ -e /bin/pacman ] && DISTRO="arch"
 }
 
+msg_check()
+{
+	TEXT=$1
+	printf "\t\033[32;1m✓\033[0m \033[1m$TEXT\033[0m\n"
+}
+
 msg1()
 {
 	TEXT=$1
@@ -127,6 +133,12 @@ clear
 msg1 "dwm Installation Script\n\t  https://github.com/jtbx/dwm\n"
 enterPrompt
 
+# Cloning repository
+msg1 "Cloning jtbx/dwm..."
+dwm_clone_folder="/tmp/jtbx_dwm"
+rm -rf $dwm_clone_folder
+git clone https://github.com/jtbx/dwm $dwm_clone_folder
+
 # Dependencies & compiling rofi-emoji if not on Arch
 msg1 "Detecting distribution..."
 detectDistro
@@ -140,7 +152,8 @@ msg1 "Installing dependencies..."
 # Compiling dwm
 msg1 "Starting compilation of dwm..."
 msg2 "Patches:\n\t  fullgaps\n\t  barpadding\n\t  hide_vacant_tags\n\t  swallow"
+cd $dwm_clone_folder
 sleep 1
 make clean install
 
-msg1 "Installation completed."
+msg_check "Installation completed."
