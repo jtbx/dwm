@@ -15,13 +15,13 @@ static const char col_gray1[]       = "#121212";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 /* was #eeeeee */
-/* col_cyan used to be #2644ba */
+/* col_accent used to be #2644ba */
 static const char col_gray4[]       = "#ffffff";
-static const char col_cyan[]        = "#005faf";
+static const char col_accent[]        = "#005faf";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_accent,  col_accent  },
 };
 
 /* tagging */
@@ -67,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 /* Dmenu command remapped to rofi */
-static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
 /* Rofi application menu variable so it can be spawned using mod + x */ 
 static const char *appmenucmd[] = { "rofi", "-show", "drun", NULL };
 /* Terminal command remapped to alacritty */
@@ -86,7 +86,7 @@ static const char *rebootcmd[] = { "reboot", NULL };
 
 static Key keys[] = {
 	/* modifier                  key           function        argument */
-	{ MODKEY,                    XK_p,         spawn,          {.v = dmenucmd } },
+	{ MODKEY,                    XK_d,         spawn,          {.v = dmenucmd } },
 	{ MODKEY,                    XK_x,         spawn,          {.v = appmenucmd } },
 	{ MODKEY,                    XK_Return,    spawn,          {.v = termcmd } },
 	/* allows for spawning web browser */
