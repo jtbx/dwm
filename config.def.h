@@ -65,10 +65,8 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_accent, "-sf", col_gray4, NULL };
-static const char *appmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
-static const char *wbrsrcmd[] = { "librewolf", NULL };
-static const char *emojicmd[] = { "rofi", "-show", "emoji", NULL };
+static const char *browsercmd[] = { "librewolf", NULL };
 static const char   *volupcmd[] = { "pamixer", "-i", "5", NULL };
 static const char *voldowncmd[] = { "pamixer", "-d", "5", NULL };
 static const char *volmutecmd[] = { "pamixer", "-t", NULL };
@@ -78,10 +76,8 @@ static const char *rebootcmd[] = { "powermenu", "-r", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_x,      spawn,          {.v = appmenucmd } },
 	{ MODKEY,  	                XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_w,      spawn,          {.v = wbrsrcmd } },
-	{ MODKEY,                       XK_semicolon, spawn,       {.v = emojicmd } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = browsercmd } },
 	// volume up, down, and mute bindings
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volupcmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = voldowncmd } },
