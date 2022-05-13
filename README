@@ -1,22 +1,15 @@
-# dwm - dynamic window manager
-
+dwm - dynamic window manager
+============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
 
-## Requirements
-
+Requirements
+------------
 In order to build dwm you need the Xlib header files.
 
-My build (by default) requires `dmenu`, `alacritty`(terminal), `librewolf`(browser), `pulseaudio`, `pamixer`(audio bindings), and my script `powermenu` (from [jtbx/scripts](https://github.com/jtbx/scripts)). Of course, you can change all of this in `config.h`.
 
-You can install (nearly) all the dependencies on Arch with this command:
-
-    sudo pacman -S alacritty pulseaudio pamixer
-
-After this, you still need to decide on a custom build of `dmenu`, install `librewolf` or `librewolf-bin` from the AUR, and put `powermenu` from [jtbx/scripts](https://github.com/jtbx/scripts) in your $PATH. Again, you can remove the bindings in `config.h`.
-
-## Installation
-
+Installation
+------------
 Edit config.mk to match your local setup (dwm is installed into
 the /usr/local namespace by default).
 
@@ -26,8 +19,8 @@ necessary as root):
     make clean install
 
 
-## Running dwm
-
+Running dwm
+-----------
 Add the following line to your .xinitrc to start dwm using startx:
 
     exec dwm
@@ -44,12 +37,12 @@ like this in your .xinitrc:
 
     while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
     do
-        sleep 1
+    	sleep 1
     done &
     exec dwm
 
 
-## Configuration
-
+Configuration
+-------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
