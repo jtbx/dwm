@@ -39,8 +39,9 @@ the DISPLAY environment variable is set correctly, e.g.:
 
 (This will start dwm on display :1 of the host foo.bar.)
 
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
+In order to display status info in the bar, you can copy status.sh into your xinitrc,
+
+or do something like this in your .xinitrc:
 
     while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
     do
