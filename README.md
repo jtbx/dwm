@@ -11,7 +11,7 @@ My build (by default) requires `dmenu`, `alacritty`(terminal), `librewolf`(brows
 
 You can install (nearly) all the dependencies on Arch with this command:
 
-    sudo pacman -S alacritty pulseaudio pamixer
+    sudo pacman -S alacritty pulseaudio pamixer ttf-jetbrains-mono
 
 After this, you still need to decide on a custom build of `dmenu`, install `librewolf` or `librewolf-bin` from the AUR, and put `powermenu` from [jtbx/scripts](https://github.com/jtbx/scripts) in your $PATH. Again, you can remove the bindings in `config.h`.
 
